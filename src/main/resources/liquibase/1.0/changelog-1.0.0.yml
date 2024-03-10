@@ -24,5 +24,14 @@ databaseChangeLog:
                   defaultValue: 'Active'
                   constraints:
                     nullable: false
+              - column:
+                  name: insert_date
+                  type: timestamp
+                  defaultValue: now()
+                  constraints:
+                    nullable: false
+              - column:
+                  name: update_date
+                  type: timestamp
 
           remarks: Table to store information about companies

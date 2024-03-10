@@ -4,9 +4,10 @@ import com.example.ms.company.model.enums.CompanyStatus;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.time.LocalDateTime;
 import java.util.Objects;
 
-import static jakarta.persistence.EnumType.*;
+import static jakarta.persistence.EnumType.STRING;
 import static jakarta.persistence.GenerationType.IDENTITY;
 
 @Getter
@@ -26,6 +27,10 @@ public class CompanyEntity {
 
     @Enumerated(STRING)
     private CompanyStatus status;
+
+    private LocalDateTime insertDate;
+
+    private LocalDateTime updateDate;
 
     @Override
     public boolean equals(Object o) {

@@ -7,9 +7,10 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.time.LocalDateTime;
 import java.util.Objects;
 
-import static jakarta.persistence.EnumType.*;
+import static jakarta.persistence.EnumType.STRING;
 import static jakarta.persistence.GenerationType.IDENTITY;
 
 @Getter
@@ -28,6 +29,10 @@ public class EmployeeEntity {
 
     @Enumerated(STRING)
     private EmployeeStatus status;
+
+    private LocalDateTime insertDate;
+
+    private LocalDateTime updateDate;
 
     @Override
     public boolean equals(Object o) {
