@@ -1,0 +1,22 @@
+databaseChangeLog:
+  - changeSet:
+      id: Create companies table
+      author: Rovshan Huseynov
+      changes:
+        - createTable:
+            tableName: companies
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: name
+                  type: text
+                  constraints:
+                    nullable: false
+
+            remarks: Table to store information about companies
