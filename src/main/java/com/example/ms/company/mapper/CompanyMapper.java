@@ -1,8 +1,10 @@
 package com.example.ms.company.mapper;
 
-import com.example.ms.company.model.request.CreateCompanyRequestDto;
 import com.example.ms.company.dao.entity.CompanyEntity;
+import com.example.ms.company.model.request.CreateCompanyRequestDto;
 import com.example.ms.company.model.response.CompanyResponseDto;
+
+import static com.example.ms.company.model.enums.CompanyStatus.ACTIVE;
 
 public enum CompanyMapper {
     COMPANY_MAPPER;
@@ -10,6 +12,7 @@ public enum CompanyMapper {
     public CompanyEntity buildCompanyEntity(CreateCompanyRequestDto companyDto){
         return CompanyEntity.builder()
                 .name(companyDto.getName())
+                .status(ACTIVE)
                 .build();
     }
 

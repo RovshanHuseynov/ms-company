@@ -9,4 +9,6 @@ public interface CompanyService {
     CompanyResponseDto getCompany(Long id);
 
     void updateCompany(Long id, String name);
+
+    void deleteCompany(Long id);
 }

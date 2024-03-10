@@ -6,7 +6,7 @@ import com.example.ms.company.service.CompanyService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
-import static org.springframework.http.HttpStatus.CREATED;
+import static org.springframework.http.HttpStatus.*;
 
 @RestController
 @RequiredArgsConstructor
@@ -26,8 +26,14 @@ public class CompanyController {
     }
 
     @PatchMapping("/{id}")
-    public void updateCompany(@PathVariable Long id,
-                              @RequestParam String name){
+    @ResponseStatus(NO_CONTENT)
+    public void updateCompany(@PathVariable Long id, @RequestParam String name){
         companyService.updateCompany(id, name);
+    }
+
+    @DeleteMapping("/{id}")
+    @ResponseStatus(NO_CONTENT)
+    public void deleteCompany(@PathVariable Long id){
+        companyService.deleteCompany(id);
     }
 }

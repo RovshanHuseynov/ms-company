@@ -1,13 +1,12 @@
 package com.example.ms.company.dao.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import com.example.ms.company.model.enums.CompanyStatus;
+import jakarta.persistence.*;
 import lombok.*;
 
 import java.util.Objects;
 
+import static jakarta.persistence.EnumType.*;
 import static jakarta.persistence.GenerationType.IDENTITY;
 
 @Getter
@@ -24,6 +23,9 @@ public class CompanyEntity {
     private Long id;
 
     private String name;
+
+    @Enumerated(STRING)
+    private CompanyStatus status;
 
     @Override
     public boolean equals(Object o) {

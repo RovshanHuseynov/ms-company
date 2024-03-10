@@ -18,5 +18,11 @@ databaseChangeLog:
                   type: text
                   constraints:
                     nullable: false
+              - column:
+                  name: status
+                  type: varchar(50)
+                  defaultValue: 'Active'
+                  constraints:
+                    nullable: false
 
-            remarks: Table to store information about companies
+          remarks: Table to store information about companies
