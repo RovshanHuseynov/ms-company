@@ -2,7 +2,7 @@ package com.example.ms.company.controller;
 
 import com.example.ms.company.model.request.CreateCompanyRequestDto;
 import com.example.ms.company.model.response.CompanyResponseDto;
-import com.example.ms.company.service.CompanyService;
+import com.example.ms.company.service.abstraction.CompanyService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 

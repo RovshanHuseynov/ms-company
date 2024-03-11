@@ -5,7 +5,7 @@ import com.example.ms.company.dao.repository.CompanyRepository;
 import com.example.ms.company.exception.NotFoundException;
 import com.example.ms.company.model.request.CreateCompanyRequestDto;
 import com.example.ms.company.model.response.CompanyResponseDto;
-import com.example.ms.company.service.CompanyService;
+import com.example.ms.company.service.abstraction.CompanyService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;

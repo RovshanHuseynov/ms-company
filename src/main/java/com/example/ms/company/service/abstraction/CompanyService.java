@@ -1,4 +1,4 @@
-package com.example.ms.company.service;
+package com.example.ms.company.service.abstraction;
 
 import com.example.ms.company.model.request.CreateCompanyRequestDto;
 import com.example.ms.company.model.response.CompanyResponseDto;

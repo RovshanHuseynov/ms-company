@@ -1,6 +1,6 @@
 package com.example.ms.company.service.impl;
 
-import com.example.ms.company.service.EmplyeeService;
+import com.example.ms.company.service.abstraction.EmplyeeService;
 import org.springframework.stereotype.Service;
 
 @Service
