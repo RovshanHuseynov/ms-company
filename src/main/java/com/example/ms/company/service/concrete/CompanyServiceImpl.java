@@ -1,4 +1,4 @@
-package com.example.ms.company.service.impl;
+package com.example.ms.company.service.concrete;
 
 import com.example.ms.company.dao.entity.CompanyEntity;
 import com.example.ms.company.dao.repository.CompanyRepository;
