@@ -6,7 +6,7 @@ spring:
     driver-class-name: org.postgresql.Driver
     url: jdbc:postgresql://localhost:5432/postgres
     username: postgres
-    password: postgres
+    password: testpassword
   jpa:
     database-platform: org.hibernate.dialect.PostgreSQLDialect
     show-sql: true
@@ -14,3 +14,7 @@ spring:
       ddl-auto: validate
   liquibase:
     change-log: classpath:liquibase/changelog-master.yml
+
+
+# docker pull postgres
+# docker run -d -e POSTGRES_PASSWORD=testpassword -p 5432:5432 --name test_posgress postgres
