@@ -38,11 +38,16 @@ public class CompanyEntity {
     @ToString.Exclude
     private CompanyDetailEntity detail;
 
+<<<<<<< HEAD
     /*@OneToMany(
+=======
+    @OneToMany(
+>>>>>>> origin/master
             mappedBy = "company",
             cascade = ALL
     )
     @ToString.Exclude
+<<<<<<< HEAD
     private List<EmployeeEntity> employees;*/
 
     /*@ManyToMany(cascade = ALL)
@@ -53,6 +58,14 @@ public class CompanyEntity {
     )
     @ToString.Exclude
     private List<FounderEntity> founders;*/
+=======
+    private List<EmployeeEntity> employees;
+
+    @ManyToMany(cascade = ALL)
+    @JoinColumn
+    @ToString.Exclude
+    private List<FounderEntity> founders;
+>>>>>>> origin/master
 
     @Override
     public boolean equals(Object o) {

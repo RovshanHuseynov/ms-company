@@ -1,6 +1,13 @@
 package com.example.ms.company.dao.entity;
 
+<<<<<<< HEAD
 import jakarta.persistence.*;
+=======
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+>>>>>>> origin/master
 import lombok.*;
 
 import java.util.Objects;
@@ -20,7 +27,10 @@ public class FounderEntity {
     @GeneratedValue(strategy = IDENTITY)
     private Long id;
 
+<<<<<<< HEAD
     @Column(name = "full_name")
+=======
+>>>>>>> origin/master
     private String fullName;
 
     @Override
