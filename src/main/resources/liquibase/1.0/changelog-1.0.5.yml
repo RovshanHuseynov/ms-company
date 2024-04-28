@@ -1,0 +1,23 @@
+databaseChangeLog:
+  - changeSet:
+      id: Insert some data into companies table
+      author: Rovshan Huseynov
+      changes:
+        - insert:
+            tableName: companies
+            columns:
+              - column:
+                  name: name
+                  value: Cybernet
+        - insert:
+            tableName: companies
+            columns:
+              - column:
+                  name: name
+                  value: Ingress
+        - insert:
+            tableName: companies
+            columns:
+              - column:
+                  name: name
+                  value: ABB

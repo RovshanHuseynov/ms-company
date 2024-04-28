@@ -1,10 +1,10 @@
 databaseChangeLog:
   - changeSet:
-      id: Create company_details table
+      id: Create employee_details table
       author: Rovshan Huseynov
       changes:
         - createTable:
-            tableName: company_details
+            tableName: employee_details
             columns:
               - column:
                   name: id
@@ -23,4 +23,4 @@ databaseChangeLog:
                   constraints:
                     nullable: false
 
-          remarks: Table to store information about company_details
+          remarks: Table to store information about employee_details

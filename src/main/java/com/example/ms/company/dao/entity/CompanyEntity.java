@@ -4,10 +4,12 @@ import com.example.ms.company.model.enums.CompanyStatus;
 import jakarta.persistence.*;
 import lombok.*;
 
-import java.time.LocalDateTime;
+import java.util.List;
 import java.util.Objects;
 
+import static jakarta.persistence.CascadeType.ALL;
 import static jakarta.persistence.EnumType.STRING;
+import static jakarta.persistence.FetchType.LAZY;
 import static jakarta.persistence.GenerationType.IDENTITY;
 
 @Getter
@@ -28,9 +30,29 @@ public class CompanyEntity {
     @Enumerated(STRING)
     private CompanyStatus status;
 
-    private LocalDateTime insertDate;
+    @OneToOne(
+            mappedBy = "company",
+            cascade = ALL,
+            fetch = LAZY
+    )
+    @ToString.Exclude
+    private CompanyDetailEntity detail;
 
-    private LocalDateTime updateDate;
+    /*@OneToMany(
+            mappedBy = "company",
+            cascade = ALL
+    )
+    @ToString.Exclude
+    private List<EmployeeEntity> employees;*/
+
+    /*@ManyToMany(cascade = ALL)
+    @JoinTable(
+            name = "company_founder",
+            joinColumns = @JoinColumn(name = "company_id"),
+            inverseJoinColumns = @JoinColumn(name = "founder_id")
+    )
+    @ToString.Exclude
+    private List<FounderEntity> founders;*/
 
     @Override
     public boolean equals(Object o) {
