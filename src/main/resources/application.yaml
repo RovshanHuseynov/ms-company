@@ -6,7 +6,7 @@ spring:
     driver-class-name: org.postgresql.Driver
     url: jdbc:postgresql://localhost:5432/postgres
     username: postgres
-    password: testpassword
+    password: localdb
   jpa:
     database-platform: org.hibernate.dialect.PostgreSQLDialect
     show-sql: true
@@ -17,4 +17,4 @@ spring:
 
 
 # docker pull postgres
-# docker run -d -e POSTGRES_PASSWORD=testpassword -p 5432:5432 --name test_posgress postgres
+# docker run -d -e POSTGRES_PASSWORD=localdb -p 5432:5432 --name local_postgres postgres
