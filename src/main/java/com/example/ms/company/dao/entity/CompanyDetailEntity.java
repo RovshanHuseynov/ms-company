@@ -3,7 +3,6 @@ package com.example.ms.company.dao.entity;
 import jakarta.persistence.*;
 import lombok.*;
 
-import java.time.LocalDateTime;
 import java.util.Objects;
 
 import static jakarta.persistence.FetchType.LAZY;
@@ -22,11 +21,11 @@ public class CompanyDetailEntity {
     @GeneratedValue(strategy = IDENTITY)
     private Long id;
 
-    @Column(name = "create_date")
+    /*@Column(name = "create_date")
     private LocalDateTime createDate;
 
     @Column(name = "insert_date")
-    private LocalDateTime insertDate;
+    private LocalDateTime insertDate;*/
 
     @OneToOne(fetch = LAZY)
     @MapsId

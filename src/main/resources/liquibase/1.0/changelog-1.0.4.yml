@@ -18,5 +18,11 @@ databaseChangeLog:
                   type: varchar(255)
                   constraints:
                     nullable: false
+              - column:
+                  name: status
+                  type: varchar(100)
+                  defaultValue: 'Active'
+                  constraints:
+                    nullable: false
 
           remarks: Table to store information about founders

@@ -1,17 +1,12 @@
 package com.example.ms.company.dao.entity;
 
-<<<<<<< HEAD
+import com.example.ms.company.model.enums.FounderStatus;
 import jakarta.persistence.*;
-=======
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
->>>>>>> origin/master
 import lombok.*;
 
 import java.util.Objects;
 
+import static jakarta.persistence.EnumType.STRING;
 import static jakarta.persistence.GenerationType.IDENTITY;
 
 @Getter
@@ -27,11 +22,11 @@ public class FounderEntity {
     @GeneratedValue(strategy = IDENTITY)
     private Long id;
 
-<<<<<<< HEAD
     @Column(name = "full_name")
-=======
->>>>>>> origin/master
     private String fullName;
+
+    @Enumerated(STRING)
+    private FounderStatus status;
 
     @Override
     public boolean equals(Object o) {

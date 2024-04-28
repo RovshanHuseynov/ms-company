@@ -1,10 +1,10 @@
 databaseChangeLog:
   - changeSet:
-      id: Create company_details table
+      id: Create employees table
       author: Rovshan Huseynov
       changes:
         - createTable:
-            tableName: company_details
+            tableName: employees
             columns:
               - column:
                   name: id
@@ -14,13 +14,22 @@ databaseChangeLog:
                     primaryKey: true
                     nullable: false
               - column:
-                  name: create_date
-                  type: timestamp
-              - column:
-                  name: insert_date
-                  type: timestamp
-                  defaultValue: now()
+                  name: full_name
+                  type: varchar(255)
                   constraints:
                     nullable: false
+              - column:
+                  name: status
+                  type: varchar(100)
+                  defaultValue: 'Active'
+                  constraints:
+                    nullable: false
+              - column:
+                  name: company_id
+                  type: bigint
+                  constraints:
+                    foreignKeyName: fk_employees_to_companies
+                    references: companies(id)
+                    nullable: true
 
-          remarks: Table to store information about company_details
+          remarks: Table to store information about employees

@@ -1,23 +1,24 @@
 databaseChangeLog:
   - changeSet:
-      id: Insert some data into companies table
+      id: Create company_founder table
       author: Rovshan Huseynov
       changes:
-        - insert:
-            tableName: companies
+        - createTable:
+            tableName: company_founder
             columns:
               - column:
-                  name: name
-                  value: Cybernet
-        - insert:
-            tableName: companies
-            columns:
+                  name: company_id
+                  type: bigint
+                  constraints:
+                    nullable: false
+                    foreignKeyName: fk_company_to_founder
+                    references: companies(id)
               - column:
-                  name: name
-                  value: Ingress
-        - insert:
-            tableName: companies
-            columns:
-              - column:
-                  name: name
-                  value: ABB
+                  name: founder_id
+                  type: bigint
+                  constraints:
+                    nullable: false
+                    foreignKeyName: fk_founder_to_company
+                    references: founders(id)
+
+          remarks: Table to store information about company_founder

@@ -24,14 +24,5 @@ databaseChangeLog:
                   defaultValue: 'Active'
                   constraints:
                     nullable: false
-<<<<<<< HEAD
-=======
-              - column:
-                  name: insert_date
-                  type: timestamp
-                  defaultValue: now()
-                  constraints:
-                    nullable: false
->>>>>>> origin/master
 
           remarks: Table to store information about companies
