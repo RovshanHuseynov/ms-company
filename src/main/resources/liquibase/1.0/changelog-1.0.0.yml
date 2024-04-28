@@ -30,8 +30,5 @@ databaseChangeLog:
                   defaultValue: now()
                   constraints:
                     nullable: false
-              - column:
-                  name: update_date
-                  type: timestamp
 
           remarks: Table to store information about companies

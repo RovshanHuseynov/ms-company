@@ -18,8 +18,6 @@ public enum CompanyMapper {
                 .id(companyEntity.getId())
                 .name(companyEntity.getName())
                 .status(companyEntity.getStatus())
-                .insertDate(companyEntity.getInsertDate())
-                .updateDate(companyEntity.getUpdateDate())
                 .build();
     }
 }
