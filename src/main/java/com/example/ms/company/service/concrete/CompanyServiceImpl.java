@@ -13,6 +13,8 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.stream.Collectors;
 
+import static com.example.ms.company.exception.ExceptionConstants.COMPANY_NOT_FOUND_CODE;
+import static com.example.ms.company.exception.ExceptionConstants.COMPANY_NOT_FOUND_MESSAGE;
 import static com.example.ms.company.mapper.CompanyMapper.COMPANY_MAPPER;
 import static com.example.ms.company.model.enums.CompanyStatus.DELETED;
 
@@ -55,6 +57,6 @@ public class CompanyServiceImpl implements CompanyService {
 
     private CompanyEntity getCompanyEntityIfExist(Long id){
         return companyRepository.findByIdAndStatusNot(id, DELETED)
-                .orElseThrow(() -> new NotFoundException("Company Not Found with id: "+ id));
+                .orElseThrow(() -> new NotFoundException(COMPANY_NOT_FOUND_CODE, String.format(COMPANY_NOT_FOUND_MESSAGE, id)));
     }
 }

@@ -29,9 +29,9 @@ public class EmployeeEntity {
     @Enumerated(STRING)
     private EmployeeStatus status;
 
-    @ManyToOne(fetch = LAZY)
+    /*@ManyToOne(fetch = LAZY)
     @ToString.Exclude
-    private CompanyEntity company;
+    private CompanyEntity company;*/
 
     @Override
     public boolean equals(Object o) {

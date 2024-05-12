@@ -21,4 +21,4 @@ databaseChangeLog:
                     foreignKeyName: fk_founder_to_company
                     references: founders(id)
 
-          remarks: Table to store information about company_founder
+          remarks: Table to store information about relation between company and founder

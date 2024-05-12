@@ -18,3 +18,5 @@ spring:
 
 # docker pull postgres
 # docker run -d -e POSTGRES_PASSWORD=localdb -p 5432:5432 --name local_postgres postgres
+#    username: db_user
+#    password: db_password
